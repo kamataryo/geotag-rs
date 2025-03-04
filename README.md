@@ -33,11 +33,3 @@
 $ curl -sL https://github.com/kamataryo/geotag-rs/releases/download/v0.1.0/geotag-rs_x86_64-unknown-linux-gnu > ./geotag
 $ chmod +x ./geotag
 ```
-
-## 使い方
-
-### プログラムの実行
-
-```
-$ geotag path/to/track.gpx path/to/images/*.jpg
-```
