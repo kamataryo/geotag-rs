@@ -22,6 +22,8 @@
 
 ビルドが完了すると、実行可能なバイナリが `target/release` ディレクトリに生成されますので適切なディレクトリに移動して使用してください。
 
+## 使い方
+
 ### バイナリのダウンロード
 
 [GitHub のリリースページ](https://github.com/kamataryo/geotag-rs/releases/latest) から、最新バージョンのバイナリをダウンロードできます。  
@@ -33,8 +35,6 @@
 $ curl -sL https://github.com/kamataryo/geotag-rs/releases/download/v0.0.2/geotag_x86_64-unknown-linux-gnu > ./geotag
 $ chmod +x ./geotag
 ```
-
-## 使い方
 
 ```shell
 $ ./geotag --help                                                      
