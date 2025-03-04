@@ -105,7 +105,7 @@ impl Geotag {
   fn parse_glob(&mut self) {
     let paths: Vec<_> = glob(&self.image_path).expect("Failed to read glob pattern").collect();
     if paths.is_empty() {
-      eprintln!("No image files found");
+      eprintln!("[warning] No image files found");
       exit(0);
     }
     for path in paths {
@@ -187,6 +187,8 @@ impl Geotag {
             metadata.set_tag(ExifTag::GPSAltitude(elevation_vec));
           }
           metadata.write_to_file(&output_path).expect("Failed to write metadata");
+        } else {
+            eprintln!("[warning] Could not interpolate for image file: {:?} at timestamp: {}", output_path, timestamp);
         }
       }
     }

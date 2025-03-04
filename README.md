@@ -33,3 +33,24 @@
 $ curl -sL https://github.com/kamataryo/geotag-rs/releases/download/v0.1.0/geotag-rs_x86_64-unknown-linux-gnu > ./geotag
 $ chmod +x ./geotag
 ```
+
+## 使い方
+
+```shell
+$ ./geotag --help                                                      
+Usage: geotag --output-dir <OUTPUT_DIR> <GPX_PATH> <IMAGE_PATH>
+
+Arguments:
+  <GPX_PATH>    GPX file path
+  <IMAGE_PATH>  Image files path. You can use glob pattern
+
+Options:
+  -o, --output-dir <OUTPUT_DIR>  Image files output
+  -h, --help                     Print help
+```
+
+以下のように実行することで、 コピーされた画像に内挿された緯度経度が付きます。
+
+```shell
+$ geotag --output-dir=output ./your.gpx "./path/to/images/*.jpg"
+```
