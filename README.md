@@ -30,7 +30,7 @@
 ダウンロードしたバイナリを実行可能にし、適切なディレクトリに移動して使用してください。
 
 ```shell
-$ curl -sL https://github.com/kamataryo/geotag-rs/releases/download/v0.1.0/geotag-rs_x86_64-unknown-linux-gnu > ./geotag
+$ curl -sL https://github.com/kamataryo/geotag-rs/releases/download/v0.0.2/geotag_x86_64-unknown-linux-gnu > ./geotag
 $ chmod +x ./geotag
 ```
 

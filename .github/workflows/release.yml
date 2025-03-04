@@ -39,7 +39,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: binary_${{ matrix.env.target }}
-        path: target/${{ matrix.env.target }}/release/geotag-rs${{matrix.env.postfix}}
+        path: target/${{ matrix.env.target }}/release/geotag${{matrix.env.postfix}}
 
   release:
     needs: build
@@ -67,8 +67,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: binary_x86_64-unknown-linux-gnu/geotag-rs
-        asset_name: geotag-rs_x86_64-unknown-linux-gnu
+        asset_path: binary_x86_64-unknown-linux-gnu/geotag
+        asset_name: geotag_x86_64-unknown-linux-gnu
         asset_content_type: application/octet-stream
 
     - name: upload darwin artifact
@@ -77,8 +77,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: binary_x86_64-apple-darwin/geotag-rs
-        asset_name: geotag-rs_x86_64-apple-darwin
+        asset_path: binary_x86_64-apple-darwin/geotag
+        asset_name: geotag_x86_64-apple-darwin
         asset_content_type: application/octet-stream
 
     - name: upload windows artifact
@@ -87,6 +87,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: binary_x86_64-pc-windows-msvc/geotag-rs.exe
-        asset_name: geotag-rs_x86_64-pc-windows-msvc.exe
+        asset_path: binary_x86_64-pc-windows-msvc/geotag.exe
+        asset_name: geotag_x86_64-pc-windows-msvc.exe
         asset_content_type: application/octet-stream
